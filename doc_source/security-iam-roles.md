@@ -20,7 +20,7 @@ When assigning IAM roles for a task, you must use the folllowing trust policy so
 }
 ```
 
-When you add a task role to a task definition, the Amazon ECS container agent automatically creates a token with a unique credential ID \(for example, `12345678-90ab-cdef-1234-567890abcdef`\) for the task\. This token and the role credentials are then added to the agent's internal cache\. The agent populates the the environment variable `AWS_CONTAINER_CREDENTIALS_RELATIVE_URI` in the container with the URI of the credential ID \(for example, `/v2/credentials/12345678-90ab-cdef-1234-567890abcdef`\)\.
+When you add a task role to a task definition, the Amazon ECS container agent automatically creates a token with a unique credential ID \(for example, `12345678-90ab-cdef-1234-567890abcdef`\) for the task\. This token and the role credentials are then added to the agent's internal cache\. The agent populates the environment variable `AWS_CONTAINER_CREDENTIALS_RELATIVE_URI` in the container with the URI of the credential ID \(for example, `/v2/credentials/12345678-90ab-cdef-1234-567890abcdef`\)\.
 
 ![\[This workflow shows the process involved when the Amazon ECS container agent caches credentials. These credentials are determined by the task role that is defined in the task definition.\]](http://docs.aws.amazon.com/AmazonECS/latest/bestpracticesguide/images/iam-roles-with-ecs-workflow.png)
 
